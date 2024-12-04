@@ -1,0 +1,521 @@
+Script started on 2024-12-04 05:09:14+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="88" LINES="24"]
+[?2004h]0;root@drserver: /scripts2root@drserver:/scripts2# ls -l
+[?2004ltotal 4
+-rwxr-xr-x 1 root root 346 dez  4 05:04 [0m[01;32mscript-iac2.sh[0m
+-rw-r--r-- 1 root root   0 dez  4 05:09 typescript
+[?2004h]0;root@drserver: /scripts2root@drserver:/scripts2# c[Kcd..
+[?2004lcd..: command not found
+[?2004h]0;root@drserver: /scripts2root@drserver:/scripts2# cd..
+[?2004lcd..: command not found
+[?2004h]0;root@drserver: /scripts2root@drserver:/scripts2# cd/[K /
+[?2004l[?2004h]0;root@drserver: /root@drserver:/# clear
+[?2004l[H[2J[3J[?2004h]0;root@drserver: /root@drserver:/# ls
+[?2004l[0m[01;34madm[0m                [01;34mdev[0m    [01;34mlib.usr-is-merged[0m  [01;34mproc[0m     [01;34msbin.usr-is-merged[0m  [01;34msrv[0m       [01;34mvar[0m
+[01;36mbin[0m                [01;34metc[0m    [01;34mlost+found[0m         [34;42mpublico[0m  [01;34mscripts[0m             swap.img  [01;34mven[0m
+[01;34mbin.usr-is-merged[0m  [01;34mhome[0m   [01;34mmedia[0m              [01;34mroot[0m     [01;34mscripts2[0m            [01;34msys[0m
+[01;34mboot[0m               [01;36mlib[0m    [01;34mmnt[0m                [01;34mrun[0m      [01;34msec[0m                 [30;42mtmp[0m
+[01;34mcdrom[0m              [01;36mlib64[0m  [01;34mopt[0m                [01;36msbin[0m     [01;34msnap[0m                [01;34musr[0m
+[?2004h]0;root@drserver: /root@drserver:/# s[K [Kcd / [Kc[Kscript2
+[?2004lbash: cd: /script2: No such file or directory
+[?2004h]0;root@drserver: /root@drserver:/# cd scripts2
+[?2004l[?2004h]0;root@drserver: /scripts2root@drserver:/scripts2# ls l-[K[K-l
+[?2004ltotal 4
+-rwxr-xr-x 1 root root 346 dez  4 05:04 [0m[01;32mscript-iac2.sh[0m
+-rw-r--r-- 1 root root   0 dez  4 05:09 typescript
+[?2004h]0;root@drserver: /scripts2root@drserver:/scripts2# cat script-iac2.sh
+[?2004l#!/bin/bahs
+
+echo "Atualizando e instalando ferramentas no servidor"
+apt-get update
+apt-get upgrade -y
+apt-get install apache2 -y
+apt-get install unzip -y
+
+echo "Bainxando arquivos da aplicação"
+
+cd /tmp
+wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
+unzip main.zip
+cd linux-site-dio
+cp -r * /var/www/html/
+
+[?2004h]0;root@drserver: /scripts2root@drserver:/scripts2# m[Knano script-iac2.sh
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;38H(B[0;7m[ Reading... ](B[m[22;36H(B[0;7m[ Read 16 lines ](B[m[H(B[0;7m  GNU nano 7.2                         script-iac2.sh                                   [1;87H(B[m[23d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[23;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location[24d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line[2d[36m#!/bin/bahs[4d(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Atualizando e instalando ferramentas no servidor"[5d[39m(B[mapt-get update[6dapt-get upgrade(B[0;1m[35m -y[7d[39m(B[mapt-get (B[0;1m[34minstall[39m(B[m apache2(B[0;1m[35m -y[8d[39m(B[mapt-get (B[0;1m[34minstall[39m(B[m unzip(B[0;1m[35m -y[10d[34mecho[39m(B[m (B[0;1m[33m"Bainxando arquivos da aplicação"[12d[34mcd[39m(B[m /tmp[13dwget https[32m:[39m(B[m//github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip[14dunzip main.zip[15d(B[0;1m[34mcd[39m(B[m linux-site-dio[16d(B[0;1m[34mcp[35m -r[39m(B[m * /var/www/html/[2d[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;55H(B[0;7m*[87G(B[m[?12l[?25h[2;11H [?25l[?12l[?25h [?25l[?12l[?25h[36ms[39m(B[m[?25l[?12l[?25h[36mh[39m(B[m[?25l[23;15H        (B[0;7mM-D(B[m DOS Format        (B[0;7mM-A(B[m Append            (B[0;7mM-B(B[m Backup File[24;2H(B[0;7mC(B[m Cancel             (B[0;7mM-M(B[m Mac Format        (B[0;7mM-P(B[m Prepend           (B[0;7m^T(B[m Browse[K[22d(B[0;7mFile Name to Write: script-iac2.sh                                                      [22;35H(B[m[?12l[?25h[?25l  [1K (B[0;7m[ Writing... ](B[m[K[1;55H(B[0;7m [87G(B[m[22;36H(B[0;7m[ Wrote 16 lines ](B[m[23;15H(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut        (B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location[24;2H(B[0;7mX(B[m Exit       (B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste      (B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line[?12l[?25h[2;12H[?25l[22d[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@drserver: /scripts2root@drserver:/scripts2# ./script-iac2.sh
+[?2004lAtualizando e instalando ferramentas no servidor
+0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A ligar a archive.ubuntu.com] [A ligar a security.ubuntu.com]0% [A aguardar por cabeçalhos] [A Ligar a security.ubuntu.com (91.189.91.81)]                                                                              Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+                                                                              0% [A aguardar por cabeçalhos] [A aguardar por cabeçalhos]                                                            Obter:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+0% [A aguardar por cabeçalhos] [2 InRelease 14,0 kB/126 kB 11%]0% [A aguardar por cabeçalhos] [2 InRelease 14,0 kB/126 kB 11%]                                                                Obter:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+0% [3 InRelease 12,5 kB/126 kB 10%] [2 InRelease 14,0 kB/126 kB 11%]0% [3 InRelease 101 kB/126 kB 80%]                                         35,9 kB/s 0s0% [A aguardar por cabeçalhos]                                            35,9 kB/s 0s0% [A aguardar por cabeçalhos]                                            35,9 kB/s 1s0% [A aguardar por cabeçalhos] [A aguardar por cabeçalhos]              35,9 kB/s 58s                                                                                       Obter:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+0% [4 InRelease 5404 B/126 kB 4%] [A aguardar por cabeçalhos]        35,9 kB/s 1min 2s                                                                                       Obter:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [7184 B]
+                                                                                       0% [4 InRelease 24,0 kB/126 kB 19%] [5 Components-amd64 2620 B/7184 B 36%]0% [4 InRelease 46,8 kB/126 kB 37%]                                       35,9 kB/s 60s0% [5 Components-amd64 store 0 B] [4 InRelease 46,8 kB/126 kB 37%] [A aguardar por cabe0% [4 InRelease 49,7 kB/126 kB 39%] [A aguardar por cabeçalhos]          35,9 kB/s 60s0% [A aguardar por cabeçalhos]                                           35,9 kB/s 58s30% [A aguardar por cabeçalhos] [A aguardar por cabeçalhos]             35,9 kB/s 58s                                                                                       Obter:6 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+30% [A aguardar por cabeçalhos] [6 Components-amd64 212 B/212 B 100%]    35,9 kB/s 58s                                                                                       Obter:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [51,9 kB]
+30% [A aguardar por cabeçalhos] [7 Components-amd64 2619 B/51,9 kB 5%]   35,9 kB/s 58s31% [A aguardar por cabeçalhos] [7 Components-amd64 2619 B/51,9 kB 5%]   35,9 kB/s 58s                                                                                       Obter:8 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+32% [A aguardar por cabeçalhos]                                          35,9 kB/s 57s32% [7 Components-amd64 store 0 B] [A aguardar por cabeçalhos]           35,9 kB/s 57s32% [A aguardar por cabeçalhos]                                          35,9 kB/s 57s32% [A aguardar por cabeçalhos]                                          35,9 kB/s 57s                                                                                       Obter:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [673 kB]
+32% [9 Packages 2617 B/673 kB 0%]                                         35,9 kB/s 57s54% [A aguardar por cabeçalhos]                                          35,9 kB/s 38s                                                                                       Obter:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [132 kB]
+55% [10 Components-amd64 40,1 kB/132 kB 30%]                              35,9 kB/s 37s55% [9 Packages store 0 B] [10 Components-amd64 40,1 kB/132 kB 30%]       35,9 kB/s 37s58% [9 Packages store 0 B] [A aguardar por cabeçalhos]                   35,9 kB/s 35s                                                                                       Obter:11 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+58% [9 Packages store 0 B] [11 Components-amd64 212 B/212 B 100%]         35,9 kB/s 35s58% [9 Packages store 0 B]                                                35,9 kB/s 35s                                                                                       Obter:12 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [720 kB]
+59% [9 Packages store 0 B] [12 Packages 21,2 kB/720 kB 3%]                35,9 kB/s 34s68% [12 Packages 310 kB/720 kB 43%]                                       35,9 kB/s 26s68% [10 Components-amd64 store 0 B] [12 Packages 310 kB/720 kB 43%]       35,9 kB/s 26s74% [12 Packages 495 kB/720 kB 69%]                                       35,9 kB/s 21s75% [11 Components-amd64 store 158 B] [12 Packages 507 kB/720 kB 70%]     35,9 kB/s 20s75% [12 Packages 507 kB/720 kB 70%]                                       35,9 kB/s 20s                                                                                       Obter:13 http://archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [214 kB]
+82% [13 Translation-en 14,0 kB/214 kB 7%]                                 35,9 kB/s 14s82% [12 Packages store 0 B] [13 Translation-en 14,0 kB/214 kB 7%]         35,9 kB/s 14s                                                                                       Obter:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [310 kB]
+89% [12 Packages store 0 B] [14 Components-amd64 23,1 kB/310 kB 7%]        35,9 kB/s 8s                                                                                       Obter:15 http://archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [3964 B]
+98% [12 Packages store 0 B] [15 Translation-en 3964 B/3964 B 100%]         35,9 kB/s 0s98% [12 Packages store 0 B]                                                35,9 kB/s 0s                                                                                       Obter:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+98% [12 Packages store 0 B] [16 Components-amd64 940 B/940 B 100%]         35,9 kB/s 0s98% [12 Packages store 0 B]                                                35,9 kB/s 0s                                                                                       Obter:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+98% [12 Packages store 0 B] [17 Components-amd64 208 B/208 B 100%]         35,9 kB/s 0s98% [12 Packages store 0 B]                                                35,9 kB/s 0s                                                                                       Obter:18 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+98% [12 Packages store 0 B] [18 Components-amd64 216 B/216 B 100%]         35,9 kB/s 0s                                                                                       Obter:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [11,7 kB]
+99% [12 Packages store 0 B] [19 Components-amd64 11,7 kB/11,7 kB 100%]     35,9 kB/s 0s99% [12 Packages store 0 B] [A aguardar por cabeçalhos]                   35,9 kB/s 0s99% [A aguardar por cabeçalhos]                                           35,9 kB/s 0s99% [13 Translation-en store 0 B] [A aguardar por cabeçalhos]             35,9 kB/s 0s99% [A aguardar por cabeçalhos]                                           35,9 kB/s 0s99% [14 Components-amd64 store 0 B] [A aguardar por cabeçalhos]           35,9 kB/s 0s                                                                                       Obter:20 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+99% [14 Components-amd64 store 0 B]                                        35,9 kB/s 0s99% [A trabalhar]                                                          35,9 kB/s 0s99% [15 Translation-en store 0 B]                                          35,9 kB/s 0s99% [A trabalhar]                                                          35,9 kB/s 0s99% [16 Components-amd64 store 0 B]                                        35,9 kB/s 0s99% [A trabalhar]                                                          35,9 kB/s 0s99% [17 Components-amd64 store 0 B]                                        35,9 kB/s 0s100% [A trabalhar]                                                         35,9 kB/s 0s100% [18 Components-amd64 store 0 B]                                       35,9 kB/s 0s100% [A trabalhar]                                                         35,9 kB/s 0s100% [19 Components-amd64 store 0 B]                                       35,9 kB/s 0s100% [A trabalhar]                                                         35,9 kB/s 0s100% [20 Components-amd64 store 0 B]                                       35,9 kB/s 0s100% [A trabalhar]                                                         35,9 kB/s 0s                                                                                       Obtidos 2504 kB em 7s (336 kB/s)
+A ler as listas de pacotes... 0%A ler as listas de pacotes... 0%A ler as listas de pacotes... 0%A ler as listas de pacotes... 4%A ler as listas de pacotes... 4%A ler as listas de pacotes... 5%A ler as listas de pacotes... 5%A ler as listas de pacotes... 7%A ler as listas de pacotes... 7%A ler as listas de pacotes... 7%A ler as listas de pacotes... 7%A ler as listas de pacotes... 7%A ler as listas de pacotes... 7%A ler as listas de pacotes... 7%A ler as listas de pacotes... 7%A ler as listas de pacotes... 55%A ler as listas de pacotes... 55%A ler as listas de pacotes... 58%A ler as listas de pacotes... 58%A ler as listas de pacotes... 79%A ler as listas de pacotes... 79%A ler as listas de pacotes... 79%A ler as listas de pacotes... 79%A ler as listas de pacotes... 79%A ler as listas de pacotes... 79%A ler as listas de pacotes... 80%A ler as listas de pacotes... 80%A ler as listas de pacotes... 81%A ler as listas de pacotes... 82%A ler as listas de pacotes... 82%A ler as listas de pacotes... 83%A ler as listas de pacotes... 83%A ler as listas de pacotes... 85%A ler as listas de pacotes... 85%A ler as listas de pacotes... 86%A ler as listas de pacotes... 86%A ler as listas de pacotes... 89%A ler as listas de pacotes... 89%A ler as listas de pacotes... 90%A ler as listas de pacotes... 90%A ler as listas de pacotes... 90%A ler as listas de pacotes... 90%A ler as listas de pacotes... 90%A ler as listas de pacotes... 90%A ler as listas de pacotes... 90%A ler as listas de pacotes... 90%A ler as listas de pacotes... 90%A ler as listas de pacotes... 90%A ler as listas de pacotes... 92%A ler as listas de pacotes... 92%A ler as listas de pacotes... 93%A ler as listas de pacotes... 93%A ler as listas de pacotes... 95%A ler as listas de pacotes... 95%A ler as listas de pacotes... 96%A ler as listas de pacotes... 96%A ler as listas de pacotes... 98%A ler as listas de pacotes... 98%A ler as listas de pacotes... 99%A ler as listas de pacotes... 99%A ler as listas de pacotes... 99%A ler as listas de pacotes... 99%A ler as listas de pacotes... 99%A ler as listas de pacotes... 99%A ler as listas de pacotes... Pronto
+A ler as listas de pacotes... 0%A ler as listas de pacotes... 100%A ler as listas de pacotes... Pronto
+A construir árvore de dependências... 0%A construir árvore de dependências... 0%A construir árvore de dependências... 50%A construir árvore de dependências... 50%A construir árvore de dependências... Pronto
+A ler a informação de estado... 0%          A ler a informação de estado... 0%A ler a informação de estado... Pronto
+A calcular a actualização... 0%A calcular a actualização... 50%A calcular a actualização... Pronto
+The following upgrades have been deferred due to phasing:
+  firmware-sof-signed python3-distupgrade ubuntu-release-upgrader-core
+Serão mantidos em suas versões actuais os seguintes pacotes:
+  sosreport
+Serão actualizados os seguintes pacotes:
+  apparmor cloud-init cloud-initramfs-copymods cloud-initramfs-dyn-netconf cryptsetup
+  cryptsetup-bin cryptsetup-initramfs distro-info-data dmeventd dmidecode dmsetup
+  fwupd initramfs-tools initramfs-tools-bin initramfs-tools-core krb5-locales libacl1
+  libapparmor1 libaudit-common libaudit1 libcryptsetup12 libdevmapper-event1.02.1
+  libdevmapper1.02.1 libfwupd2 libgssapi-krb5-2 libk5crypto3 libkrb5-3 libkrb5support0
+  libldap-common libldap2 liblvm2cmd2.03 libproc2-0 linux-firmware login lvm2
+  lxd-agent-loader mdadm mtr-tiny open-vm-tools overlayroot passwd procps
+  python3-software-properties python3-update-manager snapd software-properties-common
+  systemd-hwe-hwdb tmux ubuntu-drivers-common ubuntu-pro-client ubuntu-pro-client-l10n
+  update-manager-core
+52 pacotes actualizados, 0 pacotes novos instalados, 0 a remover e 4 não actualizados.
+É necessário obter 531 MB de arquivos.
+Após esta operação, serão utilizados 8764 kB adicionais de espaço em disco.
+0% [A trabalhar]0% [A Ligar a archive.ubuntu.com (185.125.190.82)]                                                  Obter:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 login amd64 1:4.13+dfsg1-4ubuntu3.2 [202 kB]
+                                                  0% [1 login 14,0 kB/202 kB 7%]0% [1 login 65,4 kB/202 kB 32%]                               0% [A trabalhar]                Obter:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ubuntu-drivers-common amd64 1:0.9.7.6ubuntu3.1 [64,5 kB]
+0% [2 ubuntu-drivers-common 2566 B/64,5 kB 4%]                                              1% [A aguardar por cabeçalhos]                               Obter:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libproc2-0 amd64 2:4.0.4-4ubuntu3.2 [59,5 kB]
+1% [3 libproc2-0 2014 B/59,5 kB 3%]                                   1% [A aguardar por cabeçalhos]                               Obter:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 procps amd64 2:4.0.4-4ubuntu3.2 [707 kB]
+                               1% [4 procps 816 B/707 kB 0%]2% [A aguardar por cabeçalhos]                               Obter:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 open-vm-tools amd64 2:12.4.5-1~ubuntu0.24.04.1 [740 kB]
+2% [5 open-vm-tools 4592 B/740 kB 1%]                                     2% [A aguardar por cabeçalhos]                               Obter:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libacl1 amd64 2.3.2-1build1.1 [16,8 kB]
+2% [6 libacl1 554 B/16,8 kB 3%]3% [A aguardar por cabeçalhos]                               Obter:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaudit-common all 1:3.1.2-2.1build1.1 [5824 B]
+3% [7 libaudit-common 5712 B/5824 B 98%]                                        3% [A aguardar por cabeçalhos]                               Obter:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaudit1 amd64 1:3.1.2-2.1build1.1 [47,0 kB]
+3% [8 libaudit1 11,0 kB/47,0 kB 23%]                                    3% [A aguardar por cabeçalhos]                               Obter:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 passwd amd64 1:4.13+dfsg1-4ubuntu3.2 [845 kB]
+                               3% [9 passwd 9808 B/845 kB 1%]4% [A aguardar por cabeçalhos]                               Obter:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 distro-info-data all 0.60ubuntu0.2 [6590 B]
+4% [10 distro-info-data 6590 B/6590 B 100%]                                           4% [A trabalhar]                Obter:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdevmapper1.02.1 amd64 2:1.02.185-3ubuntu3.1 [139 kB]
+4% [11 libdevmapper1.02.1 0 B/139 kB 0%]                                        5% [A aguardar por cabeçalhos]                               Obter:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dmsetup amd64 2:1.02.185-3ubuntu3.1 [79,2 kB]
+5% [12 dmsetup 20,9 kB/79,2 kB 26%]                                   5% [A aguardar por cabeçalhos]                               Obter:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.2 [14,0 kB]
+5% [13 krb5-locales 9866 B/14,0 kB 70%]                                       5% [A aguardar por cabeçalhos]                               Obter:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapparmor1 amd64 4.0.1really4.0.1-0ubuntu0.24.04.3 [50,3 kB]
+5% [14 libapparmor1 15,1 kB/50,3 kB 30%]                                        6% [A aguardar por cabeçalhos]                               Obter:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcryptsetup12 amd64 2:2.7.0-1ubuntu4.1 [266 kB]
+6% [15 libcryptsetup12 26,8 kB/266 kB 10%]                                          6% [A aguardar por cabeçalhos]                               Obter:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.2 [143 kB]
+6% [16 libgssapi-krb5-2 16,9 kB/143 kB 12%]                                           7% [A aguardar por cabeçalhos]                               Obter:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.2 [347 kB]
+7% [17 libkrb5-3 2144 B/347 kB 1%]                                  7% [A aguardar por cabeçalhos]                               Obter:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.2 [33,7 kB]
+7% [18 libkrb5support0 208 B/33,7 kB 1%]                                        7% [A aguardar por cabeçalhos]                               Obter:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.2 [81,8 kB]
+7% [19 libk5crypto3 29,1 kB/81,8 kB 36%]                                        8% [A trabalhar]                Obter:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-hwe-hwdb all 255.1.4 [3200 B]
+8% [20 systemd-hwe-hwdb 3200 B/3200 B 100%]                                           8% [A aguardar por cabeçalhos]                               Obter:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ubuntu-pro-client-l10n amd64 34~24.04 [18,4 kB]
+8% [21 ubuntu-pro-client-l10n 9066 B/18,4 kB 49%]                                                 9% [A trabalhar]                Obter:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ubuntu-pro-client amd64 34~24.04 [241 kB]
+9% [22 ubuntu-pro-client 28,7 kB/241 kB 12%]                                            9% [A aguardar por cabeçalhos]                               Obter:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apparmor amd64 4.0.1really4.0.1-0ubuntu0.24.04.3 [641 kB]
+9% [23 apparmor 11,1 kB/641 kB 2%]                                  10% [A aguardar por cabeçalhos]                                Obter:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dmidecode amd64 3.5-3ubuntu0.1 [73,0 kB]
+10% [24 dmidecode 28,7 kB/73,0 kB 39%]                                      10% [A aguardar por cabeçalhos]                                Obter:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mtr-tiny amd64 0.95-1.1ubuntu0.1 [54,3 kB]
+10% [25 mtr-tiny 17,7 kB/54,3 kB 33%]                                     10% [A aguardar por cabeçalhos]                                Obter:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-update-manager all 1:24.04.9 [43,1 kB]
+10% [26 python3-update-manager 33,6 kB/43,1 kB 78%]                                                   11% [A aguardar por cabeçalhos]                                Obter:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 update-manager-core all 1:24.04.9 [11,6 kB]
+11% [27 update-manager-core 11,6 kB/11,6 kB 100%]                                                 11% [A trabalhar]                 Obter:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-firmware amd64 20240318.git3b128b60-0ubuntu2.5 [487 MB]
+11% [28 linux-firmware 12,2 kB/487 MB 0%]13% [28 linux-firmware 10,5 MB/487 MB 2%]14% [28 linux-firmware 18,1 MB/487 MB 4%]15% [28 linux-firmware 25,0 MB/487 MB 5%]17% [28 linux-firmware 36,1 MB/487 MB 7%]18% [28 linux-firmware 46,4 MB/487 MB 10%]20% [28 linux-firmware 56,8 MB/487 MB 12%]                                9769 kB/s 48s21% [28 linux-firmware 66,1 MB/487 MB 14%]                                9769 kB/s 47s23% [28 linux-firmware 77,0 MB/487 MB 16%]                                9769 kB/s 45s24% [28 linux-firmware 87,7 MB/487 MB 18%]                                9769 kB/s 44s26% [28 linux-firmware 98,4 MB/487 MB 20%]                                9769 kB/s 43s28% [28 linux-firmware 109 MB/487 MB 22%]                                 9769 kB/s 42s29% [28 linux-firmware 120 MB/487 MB 25%]                                 9769 kB/s 41s31% [28 linux-firmware 131 MB/487 MB 27%]                                 9769 kB/s 40s32% [28 linux-firmware 142 MB/487 MB 29%]                                 9769 kB/s 39s34% [28 linux-firmware 153 MB/487 MB 31%]                                 9769 kB/s 38s36% [28 linux-firmware 163 MB/487 MB 34%]                                 9769 kB/s 37s37% [28 linux-firmware 174 MB/487 MB 36%]                                 9769 kB/s 36s39% [28 linux-firmware 185 MB/487 MB 38%]                                 21,2 MB/s 16s41% [28 linux-firmware 196 MB/487 MB 40%]                                 21,2 MB/s 15s42% [28 linux-firmware 206 MB/487 MB 42%]                                 21,2 MB/s 15s44% [28 linux-firmware 217 MB/487 MB 45%]                                 21,2 MB/s 14s45% [28 linux-firmware 228 MB/487 MB 47%]                                 21,2 MB/s 14s47% [28 linux-firmware 239 MB/487 MB 49%]                                 21,2 MB/s 13s49% [28 linux-firmware 250 MB/487 MB 51%]                                 21,2 MB/s 13s50% [28 linux-firmware 260 MB/487 MB 53%]                                 21,2 MB/s 12s52% [28 linux-firmware 270 MB/487 MB 56%]                                 21,2 MB/s 12s53% [28 linux-firmware 281 MB/487 MB 58%]                                 21,2 MB/s 11s55% [28 linux-firmware 292 MB/487 MB 60%]                                 21,2 MB/s 11s57% [28 linux-firmware 302 MB/487 MB 62%]                                 21,2 MB/s 10s57% [28 linux-firmware 302 MB/487 MB 62%]                                 19,6 MB/s 11s58% [28 linux-firmware 312 MB/487 MB 64%]                                 19,6 MB/s 10s60% [28 linux-firmware 323 MB/487 MB 66%]                                        19,6 MB/s 10s62% [28 linux-firmware 335 MB/487 MB 69%]                                         19,6 MB/s 9s63% [28 linux-firmware 345 MB/487 MB 71%]                                         19,6 MB/s 9s65% [28 linux-firmware 356 MB/487 MB 73%]                                         19,6 MB/s 8s66% [28 linux-firmware 367 MB/487 MB 75%]                                         19,6 MB/s 8s68% [28 linux-firmware 378 MB/487 MB 78%]                                         19,6 MB/s 7s70% [28 linux-firmware 388 MB/487 MB 80%]                                         19,6 MB/s 7s71% [28 linux-firmware 397 MB/487 MB 82%]                                         19,6 MB/s 6s73% [28 linux-firmware 408 MB/487 MB 84%]                                         19,6 MB/s 6s74% [28 linux-firmware 419 MB/487 MB 86%]                                         19,6 MB/s 5s76% [28 linux-firmware 429 MB/487 MB 88%]                                         21,0 MB/s 4s77% [28 linux-firmware 436 MB/487 MB 90%]                                         21,0 MB/s 4s78% [28 linux-firmware 445 MB/487 MB 91%]                                         21,0 MB/s 3s80% [28 linux-firmware 456 MB/487 MB 94%]                                         21,0 MB/s 3s81% [28 linux-firmware 467 MB/487 MB 96%]                                         21,0 MB/s 2s83% [28 linux-firmware 477 MB/487 MB 98%]                                         21,0 MB/s 2s84% [28 linux-firmware 487 MB/487 MB 100%]                                        21,0 MB/s 1s84% [28 linux-firmware 487 MB/487 MB 100%]                                        21,0 MB/s 1s                                                                                              Obter:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 initramfs-tools all 0.142ubuntu25.4 [9078 B]
+                                                                                              Obter:30 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 initramfs-tools-core all 0.142ubuntu25.4 [50,3 kB]
+                                                                                              Obter:31 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 initramfs-tools-bin amd64 0.142ubuntu25.4 [21,3 kB]
+                                                                                              Obter:32 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cryptsetup-initramfs all 2:2.7.0-1ubuntu4.1 [39,8 kB]
+86% [A aguardar por cabeçalhos]                                                  21,0 MB/s 1s                                                                                              Obter:33 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cryptsetup-bin amd64 2:2.7.0-1ubuntu4.1 [211 kB]
+86% [33 cryptsetup-bin 73,7 kB/211 kB 35%]                                        21,0 MB/s 1s                                                                                              Obter:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cryptsetup amd64 2:2.7.0-1ubuntu4.1 [208 kB]
+87% [34 cryptsetup 51,0 kB/208 kB 25%]                                            21,0 MB/s 1s                                                                                              Obter:35 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdevmapper-event1.02.1 amd64 2:1.02.185-3ubuntu3.1 [12,6 kB]
+87% [35 libdevmapper-event1.02.1 12,6 kB/12,6 kB 100%]                            21,0 MB/s 1s                                                                                              Obter:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblvm2cmd2.03 amd64 2.03.16-3ubuntu3.1 [797 kB]
+88% [36 liblvm2cmd2.03 65,2 kB/797 kB 8%]                                         21,0 MB/s 1s                                                                                              Obter:37 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dmeventd amd64 2:1.02.185-3ubuntu3.1 [37,7 kB]
+89% [A aguardar por cabeçalhos]                                                  21,0 MB/s 1s                                                                                              Obter:38 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libfwupd2 amd64 1.9.24-1~24.04.1 [136 kB]
+89% [38 libfwupd2 0 B/136 kB 0%]                                                  21,0 MB/s 1s89% [A trabalhar]                                                                 21,0 MB/s 1s                                                                                              Obter:39 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 fwupd amd64 1.9.24-1~24.04.1 [4553 kB]
+89% [39 fwupd 0 B/4553 kB 0%]                                                     21,0 MB/s 1s90% [A trabalhar]                                                                 21,0 MB/s 1s                                                                                              Obter:40 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap-common all 2.6.7+dfsg-1~exp1ubuntu8.1 [31,5 kB]
+90% [40 libldap-common 9240 B/31,5 kB 29%]                                        21,0 MB/s 1s90% [A trabalhar]                                                                 21,0 MB/s 1s                                                                                              Obter:41 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.7+dfsg-1~exp1ubuntu8.1 [195 kB]
+90% [41 libldap2 43,0 kB/195 kB 22%]                                              21,0 MB/s 1s91% [A aguardar por cabeçalhos]                                                  21,0 MB/s 1s                                                                                              Obter:42 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 lvm2 amd64 2.03.16-3ubuntu3.1 [1186 kB]
+91% [42 lvm2 19,7 kB/1186 kB 2%]                                                  21,0 MB/s 1s91% [A aguardar por cabeçalhos]                                                  21,0 MB/s 1s                                                                                              Obter:43 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 lxd-agent-loader all 0.7ubuntu0.1 [4836 B]
+91% [43 lxd-agent-loader 4836 B/4836 B 100%]                                      21,0 MB/s 1s92% [A trabalhar]                                                                 21,0 MB/s 1s                                                                                              Obter:44 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mdadm amd64 4.3-1ubuntu2.1 [464 kB]
+92% [44 mdadm 32,3 kB/464 kB 7%]                                                  21,0 MB/s 1s92% [A aguardar por cabeçalhos]                                                  21,0 MB/s 1s                                                                                              Obter:45 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 software-properties-common all 0.99.49.1 [14,4 kB]
+92% [45 software-properties-common 14,4 kB/14,4 kB 100%]                          21,0 MB/s 1s93% [A aguardar por cabeçalhos]                                                  21,0 MB/s 1s                                                                                              Obter:46 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-software-properties all 0.99.49.1 [29,7 kB]
+93% [46 python3-software-properties 29,7 kB/29,7 kB 100%]                         21,0 MB/s 1s93% [A aguardar por cabeçalhos]                                                  21,0 MB/s 1s                                                                                              Obter:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 snapd amd64 2.66.1+24.04 [30,0 MB]
+93% [47 snapd 47,7 kB/30,0 MB 0%]                                                 21,0 MB/s 1s95% [47 snapd 10,4 MB/30,0 MB 35%]                                                21,0 MB/s 0s96% [47 snapd 21,4 MB/30,0 MB 71%]                                                21,0 MB/s 0s98% [47 snapd 30,0 MB/30,0 MB 100%]                                               21,0 MB/s 0s                                                                                              Obter:48 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tmux amd64 3.4-1ubuntu0.1 [480 kB]
+98% [48 tmux 137 kB/480 kB 29%]                                                   15,5 MB/s 0s98% [A trabalhar]                                                                 15,5 MB/s 0s                                                                                              Obter:49 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cloud-init all 24.3.1-0ubuntu0~24.04.2 [602 kB]
+98% [49 cloud-init 0 B/602 kB 0%]                                                 15,5 MB/s 0s99% [A trabalhar]                                                                 15,5 MB/s 0s                                                                                              Obter:50 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cloud-initramfs-copymods all 0.49~24.04.1 [3960 B]
+99% [50 cloud-initramfs-copymods 0 B/3960 B 0%]                                   15,5 MB/s 0s99% [A trabalhar]                                                                 15,5 MB/s 0s                                                                                              Obter:51 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cloud-initramfs-dyn-netconf all 0.49~24.04.1 [6454 B]
+                                                                                              Obter:52 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 overlayroot all 0.49~24.04.1 [15,8 kB]
+100% [A trabalhar]                                                                15,5 MB/s 0s                                                                                              Obtidos 531 MB em 31s (17,3 MB/s)
+A extrair templates a partir dos pacotes: 57%A extrair templates a partir dos pacotes: 100%
+A pré-configurar os pacotes...
+(A ler a base de dados ... (A ler a base de dados ... 5%(A ler a base de dados ... 10%(A ler a base de dados ... 15%(A ler a base de dados ... 20%(A ler a base de dados ... 25%(A ler a base de dados ... 30%(A ler a base de dados ... 35%(A ler a base de dados ... 40%(A ler a base de dados ... 45%(A ler a base de dados ... 50%(A ler a base de dados ... 55%(A ler a base de dados ... 60%(A ler a base de dados ... 65%(A ler a base de dados ... 70%(A ler a base de dados ... 75%(A ler a base de dados ... 80%(A ler a base de dados ... 85%(A ler a base de dados ... 90%(A ler a base de dados ... 95%(A ler a base de dados ... 100%(A ler a base de dados ... 121535 ficheiros e diretórios atualmente instalados.)
+A preparar para desempacotar .../login_1%3a4.13+dfsg1-4ubuntu3.2_amd64.deb ...
+A descompactar login (1:4.13+dfsg1-4ubuntu3.2) sobre (1:4.13+dfsg1-4ubuntu3) ...
+A instalar login (1:4.13+dfsg1-4ubuntu3.2) ...
+(A ler a base de dados ... (A ler a base de dados ... 5%(A ler a base de dados ... 10%(A ler a base de dados ... 15%(A ler a base de dados ... 20%(A ler a base de dados ... 25%(A ler a base de dados ... 30%(A ler a base de dados ... 35%(A ler a base de dados ... 40%(A ler a base de dados ... 45%(A ler a base de dados ... 50%(A ler a base de dados ... 55%(A ler a base de dados ... 60%(A ler a base de dados ... 65%(A ler a base de dados ... 70%(A ler a base de dados ... 75%(A ler a base de dados ... 80%(A ler a base de dados ... 85%(A ler a base de dados ... 90%(A ler a base de dados ... 95%(A ler a base de dados ... 100%(A ler a base de dados ... 121535 ficheiros e diretórios atualmente instalados.)
+A preparar para desempacotar .../ubuntu-drivers-common_1%3a0.9.7.6ubuntu3.1_amd64.deb ...
+A descompactar ubuntu-drivers-common (1:0.9.7.6ubuntu3.1) sobre (1:0.9.7.6ubuntu3) ...
+A preparar para desempacotar .../libproc2-0_2%3a4.0.4-4ubuntu3.2_amd64.deb ...
+A descompactar libproc2-0:amd64 (2:4.0.4-4ubuntu3.2) sobre (2:4.0.4-4ubuntu3) ...
+A preparar para desempacotar .../procps_2%3a4.0.4-4ubuntu3.2_amd64.deb ...
+A descompactar procps (2:4.0.4-4ubuntu3.2) sobre (2:4.0.4-4ubuntu3) ...
+A preparar para desempacotar .../open-vm-tools_2%3a12.4.5-1~ubuntu0.24.04.1_amd64.deb ...
+A descompactar open-vm-tools (2:12.4.5-1~ubuntu0.24.04.1) sobre (2:12.3.5-5build3) ...
+A preparar para desempacotar .../libacl1_2.3.2-1build1.1_amd64.deb ...
+A descompactar libacl1:amd64 (2.3.2-1build1.1) sobre (2.3.2-1build1) ...
+A instalar libacl1:amd64 (2.3.2-1build1.1) ...
+(A ler a base de dados ... (A ler a base de dados ... 5%(A ler a base de dados ... 10%(A ler a base de dados ... 15%(A ler a base de dados ... 20%(A ler a base de dados ... 25%(A ler a base de dados ... 30%(A ler a base de dados ... 35%(A ler a base de dados ... 40%(A ler a base de dados ... 45%(A ler a base de dados ... 50%(A ler a base de dados ... 55%(A ler a base de dados ... 60%(A ler a base de dados ... 65%(A ler a base de dados ... 70%(A ler a base de dados ... 75%(A ler a base de dados ... 80%(A ler a base de dados ... 85%(A ler a base de dados ... 90%(A ler a base de dados ... 95%(A ler a base de dados ... 100%(A ler a base de dados ... 121536 ficheiros e diretórios atualmente instalados.)
+A preparar para desempacotar .../libaudit-common_1%3a3.1.2-2.1build1.1_all.deb ...
+A descompactar libaudit-common (1:3.1.2-2.1build1.1) sobre (1:3.1.2-2.1build1) ...
+A instalar libaudit-common (1:3.1.2-2.1build1.1) ...
+(A ler a base de dados ... (A ler a base de dados ... 5%(A ler a base de dados ... 10%(A ler a base de dados ... 15%(A ler a base de dados ... 20%(A ler a base de dados ... 25%(A ler a base de dados ... 30%(A ler a base de dados ... 35%(A ler a base de dados ... 40%(A ler a base de dados ... 45%(A ler a base de dados ... 50%(A ler a base de dados ... 55%(A ler a base de dados ... 60%(A ler a base de dados ... 65%(A ler a base de dados ... 70%(A ler a base de dados ... 75%(A ler a base de dados ... 80%(A ler a base de dados ... 85%(A ler a base de dados ... 90%(A ler a base de dados ... 95%(A ler a base de dados ... 100%(A ler a base de dados ... 121536 ficheiros e diretórios atualmente instalados.)
+A preparar para desempacotar .../libaudit1_1%3a3.1.2-2.1build1.1_amd64.deb ...
+A descompactar libaudit1:amd64 (1:3.1.2-2.1build1.1) sobre (1:3.1.2-2.1build1) ...
+A instalar libaudit1:amd64 (1:3.1.2-2.1build1.1) ...
+(A ler a base de dados ... (A ler a base de dados ... 5%(A ler a base de dados ... 10%(A ler a base de dados ... 15%(A ler a base de dados ... 20%(A ler a base de dados ... 25%(A ler a base de dados ... 30%(A ler a base de dados ... 35%(A ler a base de dados ... 40%(A ler a base de dados ... 45%(A ler a base de dados ... 50%(A ler a base de dados ... 55%(A ler a base de dados ... 60%(A ler a base de dados ... 65%(A ler a base de dados ... 70%(A ler a base de dados ... 75%(A ler a base de dados ... 80%(A ler a base de dados ... 85%(A ler a base de dados ... 90%(A ler a base de dados ... 95%(A ler a base de dados ... 100%(A ler a base de dados ... 121536 ficheiros e diretórios atualmente instalados.)
+A preparar para desempacotar .../passwd_1%3a4.13+dfsg1-4ubuntu3.2_amd64.deb ...
+A descompactar passwd (1:4.13+dfsg1-4ubuntu3.2) sobre (1:4.13+dfsg1-4ubuntu3) ...
+A instalar passwd (1:4.13+dfsg1-4ubuntu3.2) ...
+(A ler a base de dados ... (A ler a base de dados ... 5%(A ler a base de dados ... 10%(A ler a base de dados ... 15%(A ler a base de dados ... 20%(A ler a base de dados ... 25%(A ler a base de dados ... 30%(A ler a base de dados ... 35%(A ler a base de dados ... 40%(A ler a base de dados ... 45%(A ler a base de dados ... 50%(A ler a base de dados ... 55%(A ler a base de dados ... 60%(A ler a base de dados ... 65%(A ler a base de dados ... 70%(A ler a base de dados ... 75%(A ler a base de dados ... 80%(A ler a base de dados ... 85%(A ler a base de dados ... 90%(A ler a base de dados ... 95%(A ler a base de dados ... 100%(A ler a base de dados ... 121536 ficheiros e diretórios atualmente instalados.)
+A preparar para desempacotar .../00-distro-info-data_0.60ubuntu0.2_all.deb ...
+A descompactar distro-info-data (0.60ubuntu0.2) sobre (0.60ubuntu0.1) ...
+A preparar para desempacotar .../01-libdevmapper1.02.1_2%3a1.02.185-3ubuntu3.1_amd64.deb ...
+A descompactar libdevmapper1.02.1:amd64 (2:1.02.185-3ubuntu3.1) sobre (2:1.02.185-3ubuntu3) ...
+A preparar para desempacotar .../02-dmsetup_2%3a1.02.185-3ubuntu3.1_amd64.deb ...
+A descompactar dmsetup (2:1.02.185-3ubuntu3.1) sobre (2:1.02.185-3ubuntu3) ...
+A preparar para desempacotar .../03-krb5-locales_1.20.1-6ubuntu2.2_all.deb ...
+A descompactar krb5-locales (1.20.1-6ubuntu2.2) sobre (1.20.1-6ubuntu2.1) ...
+A preparar para desempacotar .../04-libapparmor1_4.0.1really4.0.1-0ubuntu0.24.04.3_amd64.deb ...
+A descompactar libapparmor1:amd64 (4.0.1really4.0.1-0ubuntu0.24.04.3) sobre (4.0.1really4.0.0-beta3-0ubuntu0.1) ...
+A preparar para desempacotar .../05-libcryptsetup12_2%3a2.7.0-1ubuntu4.1_amd64.deb ...
+A descompactar libcryptsetup12:amd64 (2:2.7.0-1ubuntu4.1) sobre (2:2.7.0-1ubuntu4) ...
+A preparar para desempacotar .../06-libgssapi-krb5-2_1.20.1-6ubuntu2.2_amd64.deb ...
+A descompactar libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.2) sobre (1.20.1-6ubuntu2.1) ...
+A preparar para desempacotar .../07-libkrb5-3_1.20.1-6ubuntu2.2_amd64.deb ...
+A descompactar libkrb5-3:amd64 (1.20.1-6ubuntu2.2) sobre (1.20.1-6ubuntu2.1) ...
+A preparar para desempacotar .../08-libkrb5support0_1.20.1-6ubuntu2.2_amd64.deb ...
+A descompactar libkrb5support0:amd64 (1.20.1-6ubuntu2.2) sobre (1.20.1-6ubuntu2.1) ...
+A preparar para desempacotar .../09-libk5crypto3_1.20.1-6ubuntu2.2_amd64.deb ...
+A descompactar libk5crypto3:amd64 (1.20.1-6ubuntu2.2) sobre (1.20.1-6ubuntu2.1) ...
+A preparar para desempacotar .../10-systemd-hwe-hwdb_255.1.4_all.deb ...
+A descompactar systemd-hwe-hwdb (255.1.4) sobre (255.1.3) ...
+A preparar para desempacotar .../11-ubuntu-pro-client-l10n_34~24.04_amd64.deb ...
+A descompactar ubuntu-pro-client-l10n (34~24.04) sobre (32.3.1~24.04) ...
+A preparar para desempacotar .../12-ubuntu-pro-client_34~24.04_amd64.deb ...
+A descompactar ubuntu-pro-client (34~24.04) sobre (32.3.1~24.04) ...
+A preparar para desempacotar .../13-apparmor_4.0.1really4.0.1-0ubuntu0.24.04.3_amd64.deb ...
+A descompactar apparmor (4.0.1really4.0.1-0ubuntu0.24.04.3) sobre (4.0.1really4.0.0-beta3-0ubuntu0.1) ...
+A preparar para desempacotar .../14-dmidecode_3.5-3ubuntu0.1_amd64.deb ...
+A descompactar dmidecode (3.5-3ubuntu0.1) sobre (3.5-3build1) ...
+A preparar para desempacotar .../15-mtr-tiny_0.95-1.1ubuntu0.1_amd64.deb ...
+A descompactar mtr-tiny (0.95-1.1ubuntu0.1) sobre (0.95-1.1build2) ...
+A preparar para desempacotar .../16-python3-update-manager_1%3a24.04.9_all.deb ...
+A descompactar python3-update-manager (1:24.04.9) sobre (1:24.04.6) ...
+A preparar para desempacotar .../17-update-manager-core_1%3a24.04.9_all.deb ...
+A descompactar update-manager-core (1:24.04.9) sobre (1:24.04.6) ...
+A preparar para desempacotar .../18-linux-firmware_20240318.git3b128b60-0ubuntu2.5_amd64.deb ...
+A descompactar linux-firmware (20240318.git3b128b60-0ubuntu2.5) sobre (20240318.git3b128b60-0ubuntu2.4) ...
+A preparar para desempacotar .../19-initramfs-tools_0.142ubuntu25.4_all.deb ...
+A descompactar initramfs-tools (0.142ubuntu25.4) sobre (0.142ubuntu25.1) ...
+A preparar para desempacotar .../20-initramfs-tools-core_0.142ubuntu25.4_all.deb ...
+A descompactar initramfs-tools-core (0.142ubuntu25.4) sobre (0.142ubuntu25.1) ...
+A preparar para desempacotar .../21-initramfs-tools-bin_0.142ubuntu25.4_amd64.deb ...
+A descompactar initramfs-tools-bin (0.142ubuntu25.4) sobre (0.142ubuntu25.1) ...
+A preparar para desempacotar .../22-cryptsetup-initramfs_2%3a2.7.0-1ubuntu4.1_all.deb ...
+A descompactar cryptsetup-initramfs (2:2.7.0-1ubuntu4.1) sobre (2:2.7.0-1ubuntu4) ...
+A preparar para desempacotar .../23-cryptsetup-bin_2%3a2.7.0-1ubuntu4.1_amd64.deb ...
+A descompactar cryptsetup-bin (2:2.7.0-1ubuntu4.1) sobre (2:2.7.0-1ubuntu4) ...
+A preparar para desempacotar .../24-cryptsetup_2%3a2.7.0-1ubuntu4.1_amd64.deb ...
+A descompactar cryptsetup (2:2.7.0-1ubuntu4.1) sobre (2:2.7.0-1ubuntu4) ...
+A preparar para desempacotar .../25-libdevmapper-event1.02.1_2%3a1.02.185-3ubuntu3.1_amd64.deb ...
+A descompactar libdevmapper-event1.02.1:amd64 (2:1.02.185-3ubuntu3.1) sobre (2:1.02.185-3ubuntu3) ...
+A preparar para desempacotar .../26-liblvm2cmd2.03_2.03.16-3ubuntu3.1_amd64.deb ...
+A descompactar liblvm2cmd2.03:amd64 (2.03.16-3ubuntu3.1) sobre (2.03.16-3ubuntu3) ...
+A preparar para desempacotar .../27-dmeventd_2%3a1.02.185-3ubuntu3.1_amd64.deb ...
+A descompactar dmeventd (2:1.02.185-3ubuntu3.1) sobre (2:1.02.185-3ubuntu3) ...
+A preparar para desempacotar .../28-libfwupd2_1.9.24-1~24.04.1_amd64.deb ...
+A descompactar libfwupd2:amd64 (1.9.24-1~24.04.1) sobre (1.9.16-1) ...
+A preparar para desempacotar .../29-fwupd_1.9.24-1~24.04.1_amd64.deb ...
+A descompactar fwupd (1.9.24-1~24.04.1) sobre (1.9.16-1) ...
+A preparar para desempacotar .../30-libldap-common_2.6.7+dfsg-1~exp1ubuntu8.1_all.deb ...
+A descompactar libldap-common (2.6.7+dfsg-1~exp1ubuntu8.1) sobre (2.6.7+dfsg-1~exp1ubuntu8) ...
+A preparar para desempacotar .../31-libldap2_2.6.7+dfsg-1~exp1ubuntu8.1_amd64.deb ...
+A descompactar libldap2:amd64 (2.6.7+dfsg-1~exp1ubuntu8.1) sobre (2.6.7+dfsg-1~exp1ubuntu8) ...
+A preparar para desempacotar .../32-lvm2_2.03.16-3ubuntu3.1_amd64.deb ...
+A descompactar lvm2 (2.03.16-3ubuntu3.1) sobre (2.03.16-3ubuntu3) ...
+A preparar para desempacotar .../33-lxd-agent-loader_0.7ubuntu0.1_all.deb ...
+A descompactar lxd-agent-loader (0.7ubuntu0.1) sobre (0.7) ...
+A preparar para desempacotar .../34-mdadm_4.3-1ubuntu2.1_amd64.deb ...
+A descompactar mdadm (4.3-1ubuntu2.1) sobre (4.3-1ubuntu2) ...
+A preparar para desempacotar .../35-software-properties-common_0.99.49.1_all.deb ...
+A descompactar software-properties-common (0.99.49.1) sobre (0.99.48) ...
+A preparar para desempacotar .../36-python3-software-properties_0.99.49.1_all.deb ...
+A descompactar python3-software-properties (0.99.49.1) sobre (0.99.48) ...
+A preparar para desempacotar .../37-snapd_2.66.1+24.04_amd64.deb ...
+A descompactar snapd (2.66.1+24.04) sobre (2.63.1+24.04) ...
+A preparar para desempacotar .../38-tmux_3.4-1ubuntu0.1_amd64.deb ...
+A descompactar tmux (3.4-1ubuntu0.1) sobre (3.4-1build1) ...
+A preparar para desempacotar .../39-cloud-init_24.3.1-0ubuntu0~24.04.2_all.deb ...
+A descompactar cloud-init (24.3.1-0ubuntu0~24.04.2) sobre (24.1.3-0ubuntu3.3) ...
+dpkg: aviso: não foi possível apagar o directório antigo '/etc/systemd/system/sshd-keygen@.service.d': Directory not empty
+A preparar para desempacotar .../40-cloud-initramfs-copymods_0.49~24.04.1_all.deb ...
+A descompactar cloud-initramfs-copymods (0.49~24.04.1) sobre (0.48) ...
+A preparar para desempacotar .../41-cloud-initramfs-dyn-netconf_0.49~24.04.1_all.deb ...
+A descompactar cloud-initramfs-dyn-netconf (0.49~24.04.1) sobre (0.48) ...
+A preparar para desempacotar .../42-overlayroot_0.49~24.04.1_all.deb ...
+A descompactar overlayroot (0.49~24.04.1) sobre (0.48) ...
+A instalar lxd-agent-loader (0.7ubuntu0.1) ...
+lxd-agent.service is a disabled or a static unit, not starting it.
+A instalar libapparmor1:amd64 (4.0.1really4.0.1-0ubuntu0.24.04.3) ...
+A instalar ubuntu-drivers-common (1:0.9.7.6ubuntu3.1) ...
+A instalar linux-firmware (20240318.git3b128b60-0ubuntu2.5) ...
+A instalar distro-info-data (0.60ubuntu0.2) ...
+A instalar libfwupd2:amd64 (1.9.24-1~24.04.1) ...
+A instalar krb5-locales (1.20.1-6ubuntu2.2) ...
+A instalar libldap-common (2.6.7+dfsg-1~exp1ubuntu8.1) ...
+A instalar libkrb5support0:amd64 (1.20.1-6ubuntu2.2) ...
+A instalar apparmor (4.0.1really4.0.1-0ubuntu0.24.04.3) ...
+A instalar nova versão do ficheiro de configuração /etc/apparmor.d/abstractions/authentication ...
+A instalar nova versão do ficheiro de configuração /etc/apparmor.d/abstractions/samba ...
+A instalar nova versão do ficheiro de configuração /etc/apparmor.d/firefox ...
+Reloading AppArmor profiles 
+A instalar python3-software-properties (0.99.49.1) ...
+A instalar mtr-tiny (0.95-1.1ubuntu0.1) ...
+A instalar libproc2-0:amd64 (2:4.0.4-4ubuntu3.2) ...
+A instalar libk5crypto3:amd64 (1.20.1-6ubuntu2.2) ...
+A instalar systemd-hwe-hwdb (255.1.4) ...
+A instalar libdevmapper1.02.1:amd64 (2:1.02.185-3ubuntu3.1) ...
+A instalar dmsetup (2:1.02.185-3ubuntu3.1) ...
+A instalar open-vm-tools (2:12.4.5-1~ubuntu0.24.04.1) ...
+A instalar nova versão do ficheiro de configuração /etc/vmware-tools/poweroff-vm-default ...
+A instalar nova versão do ficheiro de configuração /etc/vmware-tools/poweron-vm-default ...
+A instalar nova versão do ficheiro de configuração /etc/vmware-tools/resume-vm-default ...
+A instalar nova versão do ficheiro de configuração /etc/vmware-tools/scripts/vmware/network ...
+A instalar nova versão do ficheiro de configuração /etc/vmware-tools/suspend-vm-default ...
+A instalar nova versão do ficheiro de configuração /etc/vmware-tools/tools.conf.example ...
+A instalar python3-update-manager (1:24.04.9) ...
+A instalar procps (2:4.0.4-4ubuntu3.2) ...
+A instalar libcryptsetup12:amd64 (2:2.7.0-1ubuntu4.1) ...
+A instalar libkrb5-3:amd64 (1.20.1-6ubuntu2.2) ...
+A instalar dmidecode (3.5-3ubuntu0.1) ...
+A instalar tmux (3.4-1ubuntu0.1) ...
+A instalar ubuntu-pro-client (34~24.04) ...
+A instalar nova versão do ficheiro de configuração /etc/apparmor.d/ubuntu_pro_apt_news ...
+A instalar nova versão do ficheiro de configuração /etc/apt/apt.conf.d/20apt-esm-hook.conf ...
+A instalar libldap2:amd64 (2.6.7+dfsg-1~exp1ubuntu8.1) ...
+A instalar fwupd (1.9.24-1~24.04.1) ...
+fwupd-offline-update.service is a disabled or a static unit not running, not starting it.
+fwupd-refresh.service is a disabled or a static unit not running, not starting it.
+fwupd.service is a disabled or a static unit not running, not starting it.
+A instalar mdadm (4.3-1ubuntu2.1) ...
+update-initramfs: deferring update (trigger activated)
+Sourcing file `/etc/default/grub'
+Generating grub configuration file ...
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4426: /usr/sbin/grub-probe
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4426: /usr/sbin/grub-probe
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4429: /usr/sbin/grub-probe
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4429: /usr/sbin/grub-probe
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4432: /usr/sbin/grub-probe
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4432: /usr/sbin/grub-probe
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4435: /usr/sbin/grub-probe
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4435: /usr/sbin/grub-probe
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4468: /usr/sbin/grub-probe
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4468: /usr/sbin/grub-probe
+Found linux image: /boot/vmlinuz-6.8.0-49-generic
+Found initrd image: /boot/initrd.img-6.8.0-49-generic
+Found linux image: /boot/vmlinuz-6.8.0-48-generic
+Found initrd image: /boot/initrd.img-6.8.0-48-generic
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4760: /usr/sbin/grub-probe
+File descriptor 3 (pipe:[16401]) leaked on vgs invocation. Parent PID 4760: /usr/sbin/grub-probe
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+A instalar initramfs-tools-bin (0.142ubuntu25.4) ...
+A instalar cryptsetup-bin (2:2.7.0-1ubuntu4.1) ...
+A instalar ubuntu-pro-client-l10n (34~24.04) ...
+A instalar snapd (2.66.1+24.04) ...
+A instalar nova versão do ficheiro de configuração /etc/apparmor.d/usr.lib.snapd.snap-confine.real ...
+snapd.failure.service is a disabled or a static unit not running, not starting it.
+snapd.snap-repair.service is a disabled or a static unit not running, not starting it.
+A instalar cloud-init (24.3.1-0ubuntu0~24.04.2) ...
+A instalar nova versão do ficheiro de configuração /etc/cloud/cloud.cfg ...
+A instalar nova versão do ficheiro de configuração /etc/cloud/templates/sources.list.ubuntu.deb822.tmpl ...
+A instalar libdevmapper-event1.02.1:amd64 (2:1.02.185-3ubuntu3.1) ...
+A instalar cryptsetup (2:2.7.0-1ubuntu4.1) ...
+A instalar software-properties-common (0.99.49.1) ...
+A instalar libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.2) ...
+A instalar update-manager-core (1:24.04.9) ...
+A instalar initramfs-tools-core (0.142ubuntu25.4) ...
+A instalar initramfs-tools (0.142ubuntu25.4) ...
+update-initramfs: deferring update (trigger activated)
+A instalar cloud-initramfs-copymods (0.49~24.04.1) ...
+A instalar cloud-initramfs-dyn-netconf (0.49~24.04.1) ...
+A instalar overlayroot (0.49~24.04.1) ...
+A instalar cryptsetup-initramfs (2:2.7.0-1ubuntu4.1) ...
+update-initramfs: deferring update (trigger activated)
+A instalar liblvm2cmd2.03:amd64 (2.03.16-3ubuntu3.1) ...
+A instalar dmeventd (2:1.02.185-3ubuntu3.1) ...
+dm-event.service is a disabled or a static unit not running, not starting it.
+A instalar lvm2 (2.03.16-3ubuntu3.1) ...
+A processar 'triggers' para dbus (1.14.10-4ubuntu4.1) ...
+A processar 'triggers' para udev (255.4-1ubuntu8.4) ...
+A processar 'triggers' para debianutils (5.17build1) ...
+A processar 'triggers' para libc-bin (2.39-0ubuntu8.3) ...
+A processar 'triggers' para rsyslog (8.2312.0-3ubuntu9) ...
+A processar 'triggers' para man-db (2.12.0-4build2) ...
+A processar 'triggers' para initramfs-tools (0.142ubuntu25.4) ...
+update-initramfs: Generating /boot/initrd.img-6.8.0-49-generic
+Scanning processes... [                                                                       ]Scanning processes... [                                                                       ]Scanning processes... [=                                                                      ]Scanning processes... [=                                                                      ]Scanning processes... [==                                                                     ]Scanning processes... [==                                                                     ]Scanning processes... [===                                                                    ]Scanning processes... [===                                                                    ]Scanning processes... [====                                                                   ]Scanning processes... [=====                                                                  ]Scanning processes... [=====                                                                  ]Scanning processes... [======                                                                 ]Scanning processes... [======                                                                 ]Scanning processes... [=======                                                                ]Scanning processes... [=======                                                                ]Scanning processes... [========                                                               ]Scanning processes... [=========                                                              ]Scanning processes... [=========                                                              ]Scanning processes... [==========                                                             ]Scanning processes... [==========                                                             ]Scanning processes... [===========                                                            ]Scanning processes... [===========                                                            ]Scanning processes... [============                                                           ]Scanning processes... [============                                                           ]Scanning processes... [=============                                                          ]Scanning processes... [==============                                                         ]Scanning processes... [==============                                                         ]Scanning processes... [===============                                                        ]Scanning processes... [===============                                                        ]Scanning processes... [================                                                       ]Scanning processes... [================                                                       ]Scanning processes... [=================                                                      ]Scanning processes... [==================                                                     ]Scanning processes... [==================                                                     ]Scanning processes... [===================                                                    ]Scanning processes... [===================                                                    ]Scanning processes... [====================                                                   ]Scanning processes... [====================                                                   ]Scanning processes... [=====================                                                  ]Scanning processes... [=====================                                                  ]Scanning processes... [======================                                                 ]Scanning processes... [=======================                                                ]Scanning processes... [=======================                                                ]Scanning processes... [========================                                               ]Scanning processes... [========================                                               ]Scanning processes... [=========================                                              ]Scanning processes... [=========================                                              ]Scanning processes... [==========================                                             ]Scanning processes... [===========================                                            ]Scanning processes... [===========================                                            ]Scanning processes... [============================                                           ]Scanning processes... [============================                                           ]Scanning processes... [=============================                                          ]Scanning processes... [=============================                                          ]Scanning processes... [==============================                                         ]Scanning processes... [==============================                                         ]Scanning processes... [===============================                                        ]Scanning processes... [================================                                       ]Scanning processes... [================================                                       ]Scanning processes... [=================================                                      ]Scanning processes... [=================================                                      ]Scanning processes... [==================================                                     ]Scanning processes... [==================================                                     ]Scanning processes... [===================================                                    ]Scanning processes... [====================================                                   ]Scanning processes... [====================================                                   ]Scanning processes... [=====================================                                  ]Scanning processes... [=====================================                                  ]Scanning processes... [======================================                                 ]Scanning processes... [======================================                                 ]Scanning processes... [=======================================                                ]Scanning processes... [========================================                               ]Scanning processes... [========================================                               ]Scanning processes... [=========================================                              ]Scanning processes... [=========================================                              ]Scanning processes... [==========================================                             ]Scanning processes... [==========================================                             ]Scanning processes... [===========================================                            ]Scanning processes... [===========================================                            ]Scanning processes... [============================================                           ]Scanning processes... [=============================================                          ]Scanning processes... [=============================================                          ]Scanning processes... [==============================================                         ]Scanning processes... [==============================================                         ]Scanning processes... [===============================================                        ]Scanning processes... [===============================================                        ]Scanning processes... [================================================                       ]Scanning processes... [=================================================                      ]Scanning processes... [=================================================                      ]Scanning processes... [==================================================                     ]Scanning processes... [==================================================                     ]Scanning processes... [===================================================                    ]Scanning processes... [===================================================                    ]Scanning processes... [====================================================                   ]Scanning processes... [====================================================                   ]Scanning processes... [=====================================================                  ]Scanning processes... [======================================================                 ]Scanning processes... [======================================================                 ]Scanning processes... [=======================================================                ]Scanning processes... [=======================================================                ]Scanning processes... [========================================================               ]Scanning processes... [========================================================               ]Scanning processes... [=========================================================              ]Scanning processes... [==========================================================             ]Scanning processes... [==========================================================             ]Scanning processes... [===========================================================            ]Scanning processes... [===========================================================            ]Scanning processes... [============================================================           ]Scanning processes... [============================================================           ]Scanning processes... [=============================================================          ]Scanning processes... [=============================================================          ]Scanning processes... [==============================================================         ]Scanning processes... [===============================================================        ]Scanning processes... [===============================================================        ]Scanning processes... [================================================================       ]Scanning processes... [================================================================       ]Scanning processes... [=================================================================      ]Scanning processes... [=================================================================      ]Scanning processes... [==================================================================     ]Scanning processes... [===================================================================    ]Scanning processes... [===================================================================    ]Scanning processes... [====================================================================   ]Scanning processes... [====================================================================   ]Scanning processes... [=====================================================================  ]Scanning processes... [=====================================================================  ]Scanning processes... [====================================================================== ]Scanning processes... [=======================================================================]Scanning processes...                                                                          
+Scanning candidates... [                                                                      ]Scanning candidates... [====                                                                  ]Scanning candidates... [=========                                                             ]Scanning candidates... [==============                                                        ]Scanning candidates... [==================                                                    ]Scanning candidates... [=======================                                               ]Scanning candidates... [============================                                          ]Scanning candidates... [================================                                      ]Scanning candidates... [=====================================                                 ]Scanning candidates... [==========================================                            ]Scanning candidates... [==============================================                        ]Scanning candidates... [===================================================                   ]Scanning candidates... [========================================================              ]Scanning candidates... [============================================================          ]Scanning candidates... [=================================================================     ]Scanning candidates... [======================================================================]Scanning candidates...                                                                         
+Scanning linux images... [                                                                    ]Scanning linux images... [=================                                                   ]Scanning linux images... [==================================                                  ]Scanning linux images... [===================================================                 ]Scanning linux images... [====================================================================]Scanning linux images...                                                                       
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+ /etc/needrestart/restart.d/systemd-manager
+ systemctl restart cron.service multipathd.service packagekit.service ssh.service systemd-journald.service systemd-networkd.service systemd-resolved.service systemd-timesyncd.service systemd-udevd.service udisks2.service
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart systemd-logind.service
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ root @ session #1: login[824]
+ root @ user manager service: systemd[949]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+N: Some packages may have been kept back due to phasing.
+A ler as listas de pacotes... 0%A ler as listas de pacotes... 100%A ler as listas de pacotes... Pronto
+A construir árvore de dependências... 0%A construir árvore de dependências... 0%A construir árvore de dependências... 50%A construir árvore de dependências... 50%A construir árvore de dependências... Pronto
+A ler a informação de estado... 0%          A ler a informação de estado... 0%A ler a informação de estado... Pronto
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1t64 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  libaprutil1t64 liblua5.4-0 ssl-cert
+Pacotes sugeridos:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser
+Serão instalados os seguintes NOVOS pacotes:
+  apache2 apache2-bin apache2-data apache2-utils libapr1t64 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libaprutil1t64 liblua5.4-0 ssl-cert
+0 pacotes actualizados, 10 pacotes novos instalados, 0 a remover e 4 não actualizados.
+É necessário obter 2084 kB de arquivos.
+Após esta operação, serão utilizados 8094 kB adicionais de espaço em disco.
+0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A trabalhar]0% [A ligar a archive.ubuntu.com]0% [A Ligar a archive.ubuntu.com (185.125.190.81)]                                                  Obter:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapr1t64 amd64 1.7.2-3.1ubuntu0.1 [108 kB]
+                                                  1% [1 libapr1t64 14,0 kB/108 kB 13%]3% [1 libapr1t64 68,3 kB/108 kB 63%]                                    6% [A trabalhar]                Obter:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1t64 amd64 1.6.3-1.1ubuntu7 [91,9 kB]
+6% [2 libaprutil1t64 2565 B/91,9 kB 3%]                                       12% [A aguardar por cabeçalhos]                                Obter:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-1.1ubuntu7 [11,2 kB]
+12% [3 libaprutil1-dbd-sqlite3 1757 B/11,2 kB 16%]                                                  14% [A aguardar por cabeçalhos]                                Obter:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-ldap amd64 1.6.3-1.1ubuntu7 [9116 B]
+14% [4 libaprutil1-ldap 1646 B/9116 B 18%]                                          16% [A aguardar por cabeçalhos]                                Obter:5 http://archive.ubuntu.com/ubuntu noble/main amd64 liblua5.4-0 amd64 5.4.6-3build2 [166 kB]
+16% [5 liblua5.4-0 806 B/166 kB 0%]25% [A aguardar por cabeçalhos]                                                 63,1 kB/s 26s                                                                                              Obter:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-bin amd64 2.4.58-1ubuntu8.5 [1329 kB]
+25% [6 apache2-bin 2848 B/1329 kB 0%]                                            63,1 kB/s 26s78% [A aguardar por cabeçalhos]                                                  63,1 kB/s 5s                                                                                              Obter:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-data all 2.4.58-1ubuntu8.5 [163 kB]
+78% [7 apache2-data 1240 B/163 kB 1%]                                             63,1 kB/s 5s86% [A aguardar por cabeçalhos]                                                  63,1 kB/s 3s                                                                                              Obter:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-utils amd64 2.4.58-1ubuntu8.5 [97,1 kB]
+86% [8 apache2-utils 8621 B/97,1 kB 9%]                                           63,1 kB/s 3s92% [A aguardar por cabeçalhos]                                                  63,1 kB/s 1s                                                                                              Obter:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2 amd64 2.4.58-1ubuntu8.5 [90,2 kB]
+92% [9 apache2 5462 B/90,2 kB 6%]                                                 63,1 kB/s 1s97% [A aguardar por cabeçalhos]                                                  63,1 kB/s 0s                                                                                              Obter:10 http://archive.ubuntu.com/ubuntu noble/main amd64 ssl-cert all 1.1.2ubuntu1 [17,8 kB]
+98% [10 ssl-cert 7770 B/17,8 kB 44%]                                              63,1 kB/s 0s100% [A trabalhar]                                                                63,1 kB/s 0s                                                                                              Obtidos 2084 kB em 13s (163 kB/s)
+A pré-configurar os pacotes...
+A seleccionar pacote anteriormente não seleccionado libapr1t64:amd64.
+(A ler a base de dados ... (A ler a base de dados ... 5%(A ler a base de dados ... 10%(A ler a base de dados ... 15%(A ler a base de dados ... 20%(A ler a base de dados ... 25%(A ler a base de dados ... 30%(A ler a base de dados ... 35%(A ler a base de dados ... 40%(A ler a base de dados ... 45%(A ler a base de dados ... 50%(A ler a base de dados ... 55%(A ler a base de dados ... 60%(A ler a base de dados ... 65%(A ler a base de dados ... 70%(A ler a base de dados ... 75%(A ler a base de dados ... 80%(A ler a base de dados ... 85%(A ler a base de dados ... 90%(A ler a base de dados ... 95%(A ler a base de dados ... 100%(A ler a base de dados ... 121614 ficheiros e diretórios atualmente instalados.)
+A preparar para desempacotar .../0-libapr1t64_1.7.2-3.1ubuntu0.1_amd64.deb ...
+A descompactar libapr1t64:amd64 (1.7.2-3.1ubuntu0.1) ...
+A seleccionar pacote anteriormente não seleccionado libaprutil1t64:amd64.
+A preparar para desempacotar .../1-libaprutil1t64_1.6.3-1.1ubuntu7_amd64.deb ...
+A descompactar libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+A seleccionar pacote anteriormente não seleccionado libaprutil1-dbd-sqlite3:amd64.
+A preparar para desempacotar .../2-libaprutil1-dbd-sqlite3_1.6.3-1.1ubuntu7_amd64.deb ...
+A descompactar libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+A seleccionar pacote anteriormente não seleccionado libaprutil1-ldap:amd64.
+A preparar para desempacotar .../3-libaprutil1-ldap_1.6.3-1.1ubuntu7_amd64.deb ...
+A descompactar libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+A seleccionar pacote anteriormente não seleccionado liblua5.4-0:amd64.
+A preparar para desempacotar .../4-liblua5.4-0_5.4.6-3build2_amd64.deb ...
+A descompactar liblua5.4-0:amd64 (5.4.6-3build2) ...
+A seleccionar pacote anteriormente não seleccionado apache2-bin.
+A preparar para desempacotar .../5-apache2-bin_2.4.58-1ubuntu8.5_amd64.deb ...
+A descompactar apache2-bin (2.4.58-1ubuntu8.5) ...
+A seleccionar pacote anteriormente não seleccionado apache2-data.
+A preparar para desempacotar .../6-apache2-data_2.4.58-1ubuntu8.5_all.deb ...
+A descompactar apache2-data (2.4.58-1ubuntu8.5) ...
+A seleccionar pacote anteriormente não seleccionado apache2-utils.
+A preparar para desempacotar .../7-apache2-utils_2.4.58-1ubuntu8.5_amd64.deb ...
+A descompactar apache2-utils (2.4.58-1ubuntu8.5) ...
+A seleccionar pacote anteriormente não seleccionado apache2.
+A preparar para desempacotar .../8-apache2_2.4.58-1ubuntu8.5_amd64.deb ...
+A descompactar apache2 (2.4.58-1ubuntu8.5) ...
+A seleccionar pacote anteriormente não seleccionado ssl-cert.
+A preparar para desempacotar .../9-ssl-cert_1.1.2ubuntu1_all.deb ...
+A descompactar ssl-cert (1.1.2ubuntu1) ...
+A instalar ssl-cert (1.1.2ubuntu1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/ssl-cert.service → /usr/lib/systemd/system/ssl-cert.service.
+A instalar libapr1t64:amd64 (1.7.2-3.1ubuntu0.1) ...
+A instalar liblua5.4-0:amd64 (5.4.6-3build2) ...
+A instalar apache2-data (2.4.58-1ubuntu8.5) ...
+A instalar libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+A instalar libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+A instalar libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+A instalar apache2-utils (2.4.58-1ubuntu8.5) ...
+A instalar apache2-bin (2.4.58-1ubuntu8.5) ...
+A instalar apache2 (2.4.58-1ubuntu8.5) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /usr/lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /usr/lib/systemd/system/apache-htcacheclean.service.
+A processar 'triggers' para ufw (0.36.2-6) ...
+A processar 'triggers' para man-db (2.12.0-4build2) ...
+A processar 'triggers' para libc-bin (2.39-0ubuntu8.3) ...
+Scanning processes... [                                                                       ]Scanning processes... [                                                                       ]Scanning processes... [=                                                                      ]Scanning processes... [=                                                                      ]Scanning processes... [==                                                                     ]Scanning processes... [==                                                                     ]Scanning processes... [===                                                                    ]Scanning processes... [===                                                                    ]Scanning processes... [====                                                                   ]Scanning processes... [====                                                                   ]Scanning processes... [=====                                                                  ]Scanning processes... [======                                                                 ]Scanning processes... [======                                                                 ]Scanning processes... [=======                                                                ]Scanning processes... [=======                                                                ]Scanning processes... [========                                                               ]Scanning processes... [========                                                               ]Scanning processes... [=========                                                              ]Scanning processes... [=========                                                              ]Scanning processes... [==========                                                             ]Scanning processes... [===========                                                            ]Scanning processes... [===========                                                            ]Scanning processes... [============                                                           ]Scanning processes... [============                                                           ]Scanning processes... [=============                                                          ]Scanning processes... [=============                                                          ]Scanning processes... [==============                                                         ]Scanning processes... [==============                                                         ]Scanning processes... [===============                                                        ]Scanning processes... [===============                                                        ]Scanning processes... [================                                                       ]Scanning processes... [=================                                                      ]Scanning processes... [=================                                                      ]Scanning processes... [==================                                                     ]Scanning processes... [==================                                                     ]Scanning processes... [===================                                                    ]Scanning processes... [===================                                                    ]Scanning processes... [====================                                                   ]Scanning processes... [====================                                                   ]Scanning processes... [=====================                                                  ]Scanning processes... [======================                                                 ]Scanning processes... [======================                                                 ]Scanning processes... [=======================                                                ]Scanning processes... [=======================                                                ]Scanning processes... [========================                                               ]Scanning processes... [========================                                               ]Scanning processes... [=========================                                              ]Scanning processes... [=========================                                              ]Scanning processes... [==========================                                             ]Scanning processes... [==========================                                             ]Scanning processes... [===========================                                            ]Scanning processes... [============================                                           ]Scanning processes... [============================                                           ]Scanning processes... [=============================                                          ]Scanning processes... [=============================                                          ]Scanning processes... [==============================                                         ]Scanning processes... [==============================                                         ]Scanning processes... [===============================                                        ]Scanning processes... [===============================                                        ]Scanning processes... [================================                                       ]Scanning processes... [=================================                                      ]Scanning processes... [=================================                                      ]Scanning processes... [==================================                                     ]Scanning processes... [==================================                                     ]Scanning processes... [===================================                                    ]Scanning processes... [===================================                                    ]Scanning processes... [====================================                                   ]Scanning processes... [====================================                                   ]Scanning processes... [=====================================                                  ]Scanning processes... [=====================================                                  ]Scanning processes... [======================================                                 ]Scanning processes... [=======================================                                ]Scanning processes... [=======================================                                ]Scanning processes... [========================================                               ]Scanning processes... [========================================                               ]Scanning processes... [=========================================                              ]Scanning processes... [=========================================                              ]Scanning processes... [==========================================                             ]Scanning processes... [==========================================                             ]Scanning processes... [===========================================                            ]Scanning processes... [============================================                           ]Scanning processes... [============================================                           ]Scanning processes... [=============================================                          ]Scanning processes... [=============================================                          ]Scanning processes... [==============================================                         ]Scanning processes... [==============================================                         ]Scanning processes... [===============================================                        ]Scanning processes... [===============================================                        ]Scanning processes... [================================================                       ]Scanning processes... [================================================                       ]Scanning processes... [=================================================                      ]Scanning processes... [==================================================                     ]Scanning processes... [==================================================                     ]Scanning processes... [===================================================                    ]Scanning processes... [===================================================                    ]Scanning processes... [====================================================                   ]Scanning processes... [====================================================                   ]Scanning processes... [=====================================================                  ]Scanning processes... [=====================================================                  ]Scanning processes... [======================================================                 ]Scanning processes... [=======================================================                ]Scanning processes... [=======================================================                ]Scanning processes... [========================================================               ]Scanning processes... [========================================================               ]Scanning processes... [=========================================================              ]Scanning processes... [=========================================================              ]Scanning processes... [==========================================================             ]Scanning processes... [==========================================================             ]Scanning processes... [===========================================================            ]Scanning processes... [===========================================================            ]Scanning processes... [============================================================           ]Scanning processes... [=============================================================          ]Scanning processes... [=============================================================          ]Scanning processes... [==============================================================         ]Scanning processes... [==============================================================         ]Scanning processes... [===============================================================        ]Scanning processes... [===============================================================        ]Scanning processes... [================================================================       ]Scanning processes... [================================================================       ]Scanning processes... [=================================================================      ]Scanning processes... [==================================================================     ]Scanning processes... [==================================================================     ]Scanning processes... [===================================================================    ]Scanning processes... [===================================================================    ]Scanning processes... [====================================================================   ]Scanning processes... [====================================================================   ]Scanning processes... [=====================================================================  ]Scanning processes... [=====================================================================  ]Scanning processes... [====================================================================== ]Scanning processes... [=======================================================================]Scanning processes...                                                                          
+Scanning candidates... [                                                                      ]Scanning candidates... [==============                                                        ]Scanning candidates... [============================                                          ]Scanning candidates... [==========================================                            ]Scanning candidates... [========================================================              ]Scanning candidates... [======================================================================]Scanning candidates...                                                                         
+Scanning linux images... [                                                                    ]Scanning linux images... [=================                                                   ]Scanning linux images... [==================================                                  ]Scanning linux images... [===================================================                 ]Scanning linux images... [====================================================================]Scanning linux images...                                                                       
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart systemd-logind.service
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ root @ session #1: login[824]
+ root @ session #3: sshd[1016]
+ root @ user manager service: systemd[949]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+A ler as listas de pacotes... 0%A ler as listas de pacotes... 100%A ler as listas de pacotes... Pronto
+A construir árvore de dependências... 0%A construir árvore de dependências... 0%A construir árvore de dependências... 50%A construir árvore de dependências... 50%A construir árvore de dependências... Pronto
+A ler a informação de estado... 0%          A ler a informação de estado... 0%A ler a informação de estado... Pronto
+Pacotes sugeridos:
+  zip
+Serão instalados os seguintes NOVOS pacotes:
+  unzip
+0 pacotes actualizados, 1 pacotes novos instalados, 0 a remover e 4 não actualizados.
+É necessário obter 174 kB de arquivos.
+Após esta operação, serão utilizados 384 kB adicionais de espaço em disco.
+0% [A trabalhar]0% [A Ligar a archive.ubuntu.com (185.125.190.82)]                                                  Obter:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 unzip amd64 6.0-28ubuntu4.1 [174 kB]
+                                                  6% [1 unzip 14,0 kB/174 kB 8%]26% [1 unzip 56,8 kB/174 kB 33%]                                100% [A trabalhar]                  Obtidos 174 kB em 5s (35,2 kB/s)
+A seleccionar pacote anteriormente não seleccionado unzip.
+(A ler a base de dados ... (A ler a base de dados ... 5%(A ler a base de dados ... 10%(A ler a base de dados ... 15%(A ler a base de dados ... 20%(A ler a base de dados ... 25%(A ler a base de dados ... 30%(A ler a base de dados ... 35%(A ler a base de dados ... 40%(A ler a base de dados ... 45%(A ler a base de dados ... 50%(A ler a base de dados ... 55%(A ler a base de dados ... 60%(A ler a base de dados ... 65%(A ler a base de dados ... 70%(A ler a base de dados ... 75%(A ler a base de dados ... 80%(A ler a base de dados ... 85%(A ler a base de dados ... 90%(A ler a base de dados ... 95%(A ler a base de dados ... 100%(A ler a base de dados ... 122337 ficheiros e diretórios atualmente instalados.)
+A preparar para desempacotar .../unzip_6.0-28ubuntu4.1_amd64.deb ...
+A descompactar unzip (6.0-28ubuntu4.1) ...
+A instalar unzip (6.0-28ubuntu4.1) ...
+A processar 'triggers' para man-db (2.12.0-4build2) ...
+Scanning processes... [                                                                       ]Scanning processes... [                                                                       ]Scanning processes... [=                                                                      ]Scanning processes... [=                                                                      ]Scanning processes... [==                                                                     ]Scanning processes... [==                                                                     ]Scanning processes... [===                                                                    ]Scanning processes... [===                                                                    ]Scanning processes... [====                                                                   ]Scanning processes... [====                                                                   ]Scanning processes... [=====                                                                  ]Scanning processes... [======                                                                 ]Scanning processes... [======                                                                 ]Scanning processes... [=======                                                                ]Scanning processes... [=======                                                                ]Scanning processes... [========                                                               ]Scanning processes... [========                                                               ]Scanning processes... [=========                                                              ]Scanning processes... [=========                                                              ]Scanning processes... [==========                                                             ]Scanning processes... [===========                        
